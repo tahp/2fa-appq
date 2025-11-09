@@ -16,6 +16,7 @@ git clone https://github.com/tahp/2fa-appq.git
 cd 2fa-appq
 npm install
 node index.js
+```
 
 ## 🛡️ Usage
 
@@ -25,3 +26,28 @@ Run the CLI to generate a TOTP code or manage stored accounts.
 
 ```bash
 node index.js --account myemail@example.com
+```
+
+### Manage secrets
+
+```bash
+node index.js --list             # Show all stored accounts
+node index.js --add              # Add a new secret interactively
+node index.js --remove github    # Delete the 'github' account
+```
+
+Secrets are stored locally in `secrets.json` and never leave your device.
+
+## 📁 Structure
+
+```
+/2fa-appq
+├── index.js
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+## 📝 License
+
+MIT — feel free to use, modify, and share.
